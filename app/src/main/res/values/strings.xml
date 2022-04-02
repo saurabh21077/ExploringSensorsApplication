@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Sensors Exploration App</string>
+    <string name="motion">Motion Sensors</string>
+    <string name="gyroscope">Gyroscope Sensor</string>
+    <string name="linear">Linear Acceleration Sensor</string>
+    <string name="environmental">Environmental Sensors</string>
+    <string name="temperature">Temperature Sensor</string>
+    <string name="light">Light Sensor</string>
+    <string name="positional">Positional Sensors</string>
+    <string name="proximity">Proximity Sensor</string>
+    <string name="orientation">Orientation Sensor</string>
+    <string name="deviceInMotion">The device is in motion</string>
+    <string name="deviceNotInMotion">The device is not in motion</string>
 </resources>
