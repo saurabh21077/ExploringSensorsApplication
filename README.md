@@ -25,3 +25,11 @@ phone.
 8. Bonus: Start collecting sensor data when the phone screen is placed
 upwards and stop collecting data when the screen is placed downwards on
 a surface.
+
+## Screenshots:
+<p>
+  <img src="https://github.com/Mobile-Computing-Winter-2022/assignment-0-saurabh21077/blob/assignment-4/Screenshot_1.png" width="250" title="SS1">
+  <img src="https://github.com/Mobile-Computing-Winter-2022/assignment-0-saurabh21077/blob/assignment-4/Screenshot_2.png" width="250" title="SS2">
+  <img src="https://github.com/Mobile-Computing-Winter-2022/assignment-0-saurabh21077/blob/assignment-4/Screenshot_3.png" width="250" title="SS3">
+  
+</p>
