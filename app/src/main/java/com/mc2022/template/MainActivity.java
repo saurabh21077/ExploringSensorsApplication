@@ -582,7 +582,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
                 set1.setFormSize(15.f);
                 if (Utils.getSDKInt() >= 18) {
-                    Drawable drawable = ContextCompat.getDrawable(MainActivity.this, R.color.teal_200);
+                    Drawable drawable = ContextCompat.getDrawable(MainActivity.this, android.R.color.holo_green_light);
                     set1.setFillDrawable(drawable);
                 } else {
                     set1.setFillColor(Color.DKGRAY);
@@ -690,7 +690,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 set2.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
                 set2.setFormSize(15.f);
                 if (Utils.getSDKInt() >= 18) {
-                    Drawable drawable = ContextCompat.getDrawable(MainActivity.this, android.R.color.holo_orange_light);
+                    Drawable drawable = ContextCompat.getDrawable(MainActivity.this, android.R.color.holo_green_light);
                     set2.setFillDrawable(drawable);
                 } else {
                     set2.setFillColor(Color.DKGRAY);
