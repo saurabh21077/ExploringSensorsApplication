@@ -531,14 +531,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Gyroscope gyroscopeObject = new Gyroscope(sensorEvent.values[0], sensorEvent.values[1], sensorEvent.values[2]);
             gyroscopeDatabaseObject.gyroscopeDAO().insert(gyroscopeObject);
             // Get List
-            List<Gyroscope> myEntries = gyroscopeDatabaseObject.gyroscopeDAO().getList();
-            String output = "";
-            for(Gyroscope m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
-
-            }
-            Log.i("Gyroscope : ",output);
+//            List<Gyroscope> myEntries = gyroscopeDatabaseObject.gyroscopeDAO().getList();
+//            String output = "";
+//            for(Gyroscope m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
+//
+//            }
+//            Log.i("Gyroscope : ",output);
         }
         else if (sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
             Log.d(TAG, "Linear Acceleration:" + sensorEvent.values[0]+sensorEvent.values[1]+sensorEvent.values[2]);
@@ -597,14 +597,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
 
             // Get List
-            List<LinearAcceleration> myEntries = linearAccelerationDatabaseObject.linearAccelerationDAO().getList();
-            String output = "";
-            for(LinearAcceleration m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
-
-            }
-            Log.i("Linear Acceleration : ",output);
+//            List<LinearAcceleration> myEntries = linearAccelerationDatabaseObject.linearAccelerationDAO().getList();
+//            String output = "";
+//            for(LinearAcceleration m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
+//
+//            }
+//            Log.i("Linear Acceleration : ",output);
         }
         else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
             Log.d(TAG, "Ambient Temperature:" + sensorEvent.values[0]);
@@ -615,15 +615,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             AmbientTemperature ambientTemperatureObject = new AmbientTemperature(sensorEvent.values[0]);
             ambientTemperatureDatabaseObject.ambientTemperatureDAO().insert(ambientTemperatureObject);
             // Get List
-            List<AmbientTemperature> myEntries = ambientTemperatureDatabaseObject.ambientTemperatureDAO().getList();
-            String output = "";
-            for(AmbientTemperature m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + Float.toString(m.getAmbientAirTemperature()) +"\n";
-            }
-
-
-            Log.i("Ambient Temperature : ",output);
+//            List<AmbientTemperature> myEntries = ambientTemperatureDatabaseObject.ambientTemperatureDAO().getList();
+//            String output = "";
+//            for(AmbientTemperature m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + Float.toString(m.getAmbientAirTemperature()) +"\n";
+//            }
+//
+//
+//            Log.i("Ambient Temperature : ",output);
 
         }
         else if (sensor.getType() == Sensor.TYPE_LIGHT) {
@@ -634,7 +634,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Light lightObject = new Light(sensorEvent.values[0]);
             lightDatabaseObject.lightDAO().insert(lightObject);
 
-            if(lightObject.getIlluminance() > 5000){
+            if(lightObject.getIlluminance() < 1000){
                 uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
             }
             else{
@@ -642,14 +642,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
 
             // Get List
-            List<Light> myEntries = lightDatabaseObject.lightDAO().getList();
-            String output = "";
-            for(Light m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + m.getIlluminance() +"\n";
-
-            }
-            Log.i("Light : ",output);
+//            List<Light> myEntries = lightDatabaseObject.lightDAO().getList();
+//            String output = "";
+//            for(Light m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + m.getIlluminance() +"\n";
+//
+//            }
+//            Log.i("Light : ",output);
         }
         else if (sensor.getType() == Sensor.TYPE_PROXIMITY) {
             Log.d(TAG, "Proximity:" + sensorEvent.values[0]);
@@ -714,14 +714,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
 
             // Get List
-            List<Proximity> myEntries = proximityDatabaseObject.proximityDAO().getList();
-            String output = "";
-            for(Proximity m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + m.getDistanceFromObject() +"\n";
-
-            }
-            Log.i("Proximity : ",output);
+//            List<Proximity> myEntries = proximityDatabaseObject.proximityDAO().getList();
+//            String output = "";
+//            for(Proximity m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + m.getDistanceFromObject() +"\n";
+//
+//            }
+//            Log.i("Proximity : ",output);
         }
         else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
             Log.d(TAG, "Magnetometer:" + sensorEvent.values[0]);
@@ -733,14 +733,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             MagneticField magneticFieldObject = new MagneticField(sensorEvent.values[0], sensorEvent.values[1], sensorEvent.values[2]);
             magneticFieldDatabaseObject.magneticFieldDAO().insert(magneticFieldObject);
             // Get List
-            List<MagneticField> myEntries = magneticFieldDatabaseObject.magneticFieldDAO().getList();
-            String output = "";
-            for(MagneticField m : myEntries)
-            {
-                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
-
-            }
-            Log.i("Magnetic Field : ",output);
+//            List<MagneticField> myEntries = magneticFieldDatabaseObject.magneticFieldDAO().getList();
+//            String output = "";
+//            for(MagneticField m : myEntries)
+//            {
+//                output += Integer.toString(m.getId()) + " " + m.getX() + " " + m.getY() + " " + m.getZ() + "\n";
+//
+//            }
+//            Log.i("Magnetic Field : ",output);
 
         }
     }
@@ -788,14 +788,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 UserLocation userLocationObject = new UserLocation(name, address, latitude, longitude);
                 userLocationDatabaseObject.userLocationDAO().insert(userLocationObject);
                 // Get List
-                List<UserLocation> myEntries = userLocationDatabaseObject.userLocationDAO().getList();
-                String output = "";
-                for(UserLocation m : myEntries)
-                {
-                    output += Integer.toString(m.getId()) + " " + m.getLatitude()+" "+m.getLongitude()+" "+m.getAddress() +"\n";
-
-                }
-                Log.i("User Location : ",output);
+//                List<UserLocation> myEntries = userLocationDatabaseObject.userLocationDAO().getList();
+//                String output = "";
+//                for(UserLocation m : myEntries)
+//                {
+//                    output += Integer.toString(m.getId()) + " " + m.getLatitude()+" "+m.getLongitude()+" "+m.getAddress() +"\n";
+//
+//                }
+//                Log.i("User Location : ",output);
 
             }catch (Exception e){
                 e.printStackTrace();
@@ -832,19 +832,19 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 float[] results = new float[1];
                 Location.distanceBetween(latitude, longitude, m.getLatitude(), m.getLongitude(), results);
                 float distance = results[0];
-                System.out.println("Distance 1 = "+ distance+" : object "+m.getAddress());
+                //System.out.println("Distance 1 = "+ distance+" : object "+m.getAddress());
                 if(distance < min1 && !(m.getLatitude() == latitude && m.getLongitude()==longitude)){
                     nearbyLocation1 = m;
                     min1 = distance;
                 }
-                System.out.println("Nearby 1 = "+ nearbyLocation1);
+                //System.out.println("Nearby 1 = "+ nearbyLocation1);
                 //output += Integer.toString(m.getId()) + " " + m.getLatitude()+" "+m.getLongitude()+" "+m.getAddress() +"\n";
             }
-            Log.i("\nNearby Location 1 : ","Distance = "+min1+"*"+
-                    nearbyLocation1.getId()+"*\n"+
-                    nearbyLocation1.getLatitude()+"*\n"+
-                    nearbyLocation1.getLongitude()+"*\n"+
-                    nearbyLocation1.getAddress());
+//            Log.i("\nNearby Location 1 : ","Distance = "+min1+"*"+
+//                    nearbyLocation1.getId()+"*\n"+
+//                    nearbyLocation1.getLatitude()+"*\n"+
+//                    nearbyLocation1.getLongitude()+"*\n"+
+//                    nearbyLocation1.getAddress());
 
             nearby_location1_distance_value_tv.setText(Float.toString(min1));
             nearby_location1_lat_value_tv.setText(Double.toString(nearbyLocation1.getLatitude()));
@@ -865,11 +865,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                     }
                     //output += Integer.toString(m.getId()) + " " + m.getLatitude() + " " + m.getLongitude() + " " + m.getAddress() + "\n";
                 }
-                Log.i("\nNearby Location 2 : ","Distance = "+min2+"*"+
-                        nearbyLocation2.getId()+"*\n"+
-                        nearbyLocation2.getLatitude()+"*\n"+
-                        nearbyLocation2.getLongitude()+"*\n"+
-                        nearbyLocation2.getAddress());
+//                Log.i("\nNearby Location 2 : ","Distance = "+min2+"*"+
+//                        nearbyLocation2.getId()+"*\n"+
+//                        nearbyLocation2.getLatitude()+"*\n"+
+//                        nearbyLocation2.getLongitude()+"*\n"+
+//                        nearbyLocation2.getAddress());
 
                 nearby_location2_distance_value_tv.setText(Float.toString(min2));
                 nearby_location2_lat_value_tv.setText(Double.toString(nearbyLocation2.getLatitude()));
@@ -892,11 +892,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                     }
                     //output += Integer.toString(m.getId()) + " " + m.getLatitude() + " " + m.getLongitude() + " " + m.getAddress() + "\n";
                 }
-                Log.i("\nNearby Location 3 : ","Distance = "+min3+"*"+
-                        nearbyLocation3.getId()+"*\n"+
-                        nearbyLocation3.getLatitude()+"*\n"+
-                        nearbyLocation3.getLongitude()+"*\n"+
-                        nearbyLocation3.getAddress());
+//                Log.i("\nNearby Location 3 : ","Distance = "+min3+"*"+
+//                        nearbyLocation3.getId()+"*\n"+
+//                        nearbyLocation3.getLatitude()+"*\n"+
+//                        nearbyLocation3.getLongitude()+"*\n"+
+//                        nearbyLocation3.getAddress());
 
                 nearby_location3_distance_value_tv.setText(Float.toString(min3));
                 nearby_location3_lat_value_tv.setText(Double.toString(nearbyLocation3.getLatitude()));
