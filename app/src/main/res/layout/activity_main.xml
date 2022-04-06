@@ -14,16 +14,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="5dp"
-                android:textSize="24sp"
-                android:text="@string/motion" />
+                android:layout_marginTop="20dp"
+                android:text="@string/motion"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewMotionDetection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="@string/deviceNotInMotion"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,16 +45,30 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/gyroscope"
                     android:textColor="@color/black"
-                    android:text="@string/gyroscope" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton1"
                     android:layout_width="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="0 0 0"
+                    android:textColor="@color/purple_700" />
             </LinearLayout>
 
             <LinearLayout
@@ -57,37 +81,46 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/linear"
                     android:textColor="@color/black"
-                    android:text="@string/linear" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton2"
-                    android:layout_marginRight="15dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
                     android:layout_weight="1"
-                    android:textColor="@color/purple_700"
-                    android:text="@string/deviceInMotion" />
+                    android:text="0.0  0.0  0.0"
+                    android:textColor="@color/purple_700" />
             </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linear_lc"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp">
+            </com.github.mikephil.charting.charts.LineChart>
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="5dp"
-                android:textSize="24sp"
-                android:text="@string/environmental" />
+                android:layout_marginTop="20dp"
+                android:text="@string/environmental"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,15 +132,29 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/temperature"
                     android:textColor="@color/black"
-                    android:text="@string/temperature" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton3"
-                    android:layout_marginRight="15dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="0.0"
+                    android:textColor="@color/purple_700" />
             </LinearLayout>
 
             <LinearLayout
@@ -120,9 +167,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/light"
                     android:textColor="@color/black"
-                    android:text="@string/light" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton4"
@@ -133,14 +180,28 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="0.0"
+                    android:textColor="@color/purple_700" />
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="5dp"
-                android:textSize="24sp"
-                android:text="@string/positional" />
+                android:layout_marginTop="20dp"
+                android:text="@string/positional"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,17 +213,37 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/proximity"
                     android:textColor="@color/black"
-                    android:text="@string/proximity" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton5"
-                    android:layout_marginRight="15dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="0.0"
+                    android:textColor="@color/purple_700" />
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/proximity_lc"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="10dp">
+            </com.github.mikephil.charting.charts.LineChart>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,16 +255,624 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
+                    android:text="@string/magneticField"
                     android:textColor="@color/black"
-                    android:text="@string/orientation" />
+                    android:textSize="20sp" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton6"
-                    android:layout_marginRight="15dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:text="0.0  0.0  0.0"
+                    android:textColor="@color/purple_700" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/location"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/addPlace"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="Latitude : "
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0.0"
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="Longitude : "
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0.0"
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="Name : "
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Your Location"
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="Address : "
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Your address"
+                        android:textColor="@color/purple_700"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/findPlace"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1"
+                            android:text="Nearest Place - 1"
+                            android:visibility="gone"
+                            android:textColor="@color/purple_700" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textViewDistance1"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Distance (in mts): "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textViewDistance1Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Latitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView29"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView30"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Longitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Name : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Your Location"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Address : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView35"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Your address"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/textView36"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Nearest Place - 2"
+                            android:visibility="gone"
+                            android:textColor="@color/purple_700" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textViewDistance2"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Distance (in mts): "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textViewDistance2Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Latitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView39"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Longitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView40"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView41"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Name : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView42"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Your Location"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Address : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView44"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Your address"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:text="Nearest Place - 3"
+                            android:visibility="gone"
+                            android:textColor="@color/purple_700" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textViewDistance3"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Distance (in mts): "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textViewDistance3Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView46"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Latitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView47"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView48"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Longitude : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView49"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView50"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Name : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Your Location"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp">
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:text="Address : "
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+
+                            <TextView
+                                android:id="@+id/textView53"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your address"
+                                android:layout_marginLeft="10dp"
+                                android:visibility="gone"
+                                android:textColor="@color/purple_700" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -4,11 +4,14 @@
     <string name="gyroscope">Gyroscope Sensor</string>
     <string name="linear">Linear Acceleration Sensor</string>
     <string name="environmental">Environmental Sensors</string>
-    <string name="temperature">Temperature Sensor</string>
+    <string name="temperature">Ambient Temperature Sensor</string>
     <string name="light">Light Sensor</string>
     <string name="positional">Positional Sensors</string>
     <string name="proximity">Proximity Sensor</string>
-    <string name="orientation">Orientation Sensor</string>
+    <string name="magneticField">Magnetometer Sensor</string>
     <string name="deviceInMotion">The device is in motion</string>
     <string name="deviceNotInMotion">The device is not in motion</string>
+    <string name="location">Location Services</string>
+    <string name="addPlace">Add a Place</string>
+    <string name="findPlace">Find my places</string>
 </resources>
